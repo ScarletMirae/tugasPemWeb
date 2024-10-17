@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven - Your Online Coffee Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header header header"
+                "main main main main main"
+                "footer footer footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        header {
+            grid-area: header;
+            background-color: #4A2C2A;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #E6D3B3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            grid-area: main;
+            padding: 2rem;
+        }
+        .hero {
+            background-color: #B38867;
+            color: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero::before {
+            content: "☕";
+            font-size: 15rem;
+            position: absolute;
+            right: -2rem;
+            bottom: -4rem;
+            opacity: 0.1;
+        }
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .product {
+            background-color: #F5E6D3;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product-image {
+            background-color: #D2B48C;
+            height: 150px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #4A2C2A;
+            color: #E6D3B3;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Brew Haven</h1>
+                    <p>Discover the finest coffee beans from around the world.</p>
+                </div>
+            </section>
+            
+            <section class="featured-products">
+                <div class="product">
+                    <div class="product-image">☕</div>
+                    <h3>Espresso Blend</h3>
+                    <p>Bold and rich, perfect for your morning boost.</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">☕</div>
+                    <h3>Colombian Supremo</h3>
+                    <p>Smooth and balanced with a hint of nuttiness.</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">☕</div>
+                    <h3>Ethiopian Yirgacheffe</h3>
+                    <p>Floral and fruity notes with a wine-like acidity.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Brew Haven. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
